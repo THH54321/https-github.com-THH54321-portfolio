@@ -62,31 +62,31 @@
             <h2>Projects</h2>
             <div class="projects-grid">
                 <div class="project-card">
-                    <h3>Little Go Getters</h3>
-                    <p>Brief description of your first project and the technologies used.</p>
+                    <h3>Little Go Getters– Market Entry Strategy Project</h3>
+                    <p>Collaborated as an international team of seven students on a client-facing consultancy project to develop strategies for launching a new business without relying on Meta social media platforms.</p>
                     <div class="project-tags">
                         <span>React</span>
                         <span>JavaScript</span>
                     </div>
-                    <a href="#" class="project-link">View Project →</a>
+                    <a href="javascript:void(0)" class="project-link" onclick="openProject('Little Go Getters', 'project1')">View Project →</a>
                 </div>
                 <div class="project-card">
-                    <h3>“Who Am I” Card Game</h3>
-                    <p>Brief description of your second project and the technologies used.</p>
+                    <h3>“Who Am I” Card Game - A card game on understanding personhood</h3>
+                    <p> An emotionally sensitive, practical, and ethically appropriate card game that helps caregivers better understand the personhood of palliative patients.</p>
                     <div class="project-tags">
                         <span>Python</span>
                         <span>API</span>
                     </div>
-                    <a href="#" class="project-link">View Project →</a>
+                    <a href="javascript:void(0)" class="project-link" onclick="openProject('"Who Am I" Card Game', 'project1')">View Project →</a>
                 </div>
                 <div class="project-card">
-                    <h3>Accessibility at Esplanade</h3>
-                    <p>Brief description of your third project and the technologies used.</p>
+                    <h3>Accessibility at Esplanade – Inclusive Design Project</h3>
+                    <p>The project focuses on designing a calm, sensory-considerate space at the Esplanade to reduce overstimulation and improve accessibility.</p>
                     <div class="project-tags">
                         <span>Full-Stack</span>
                         <span>Node.js</span>
                     </div>
-                    <a href="#" class="project-link">View Project →</a>
+                    <a href="javascript:void(0)" class="project-link" onclick="openProject('Accessibility at Esplanade', 'project1')">View Project →</a>
                 </div>
             </div>
         </div>
@@ -136,5 +136,93 @@
             <p>&copy; 2026 Your Name. All rights reserved.</p>
         </div>
     </footer>
+    <!-- Modal for Project Details -->
+<div id="projectModal" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <div id="modalBody">
+            <!-- Project details will be inserted here -->
+        </div>
+    </div>
+</div>
+    <script>
+    // Project data with images and descriptions
+    const projects = {
+        project1: {
+            title: "Your First Project",
+            images: [
+                "https://via.placeholder.com/600x400?text=Project+1+Image+1",
+                "https://via.placeholder.com/600x400?text=Project+1+Image+2"
+            ],
+            description: `
+                <p><strong>Overview:</strong> Detailed description of your first project goes here.</p>
+                <p><strong>Technologies Used:</strong> JavaScript, React, Node.js</p>
+                <p><strong>What I Did:</strong> List your contributions and achievements.</p>
+                <p><strong>Results:</strong> What was the impact or outcome?</p>
+                <p><a href="https://github.com/yourlink" target="_blank">View on GitHub →</a></p>
+            `
+        },
+        project2: {
+            title: '"Who Am I" Card Game',
+            images: [
+                "https://via.placeholder.com/600x400?text=Card+Game+Image+1",
+                "https://via.placeholder.com/600x400?text=Card+Game+Image+2"
+            ],
+            description: `
+                <p><strong>Overview:</strong> An emotionally sensitive, practical, and ethically appropriate card game that helps caregivers better understand the personhood of palliative patients.</p>
+                <p><strong>Technologies Used:</strong> Python, API</p>
+                <p><strong>Purpose:</strong> Designed to improve caregiver-patient relationships through empathy-driven gameplay.</p>
+                <p><strong>Impact:</strong> Describe the feedback or results from testing.</p>
+                <p><a href="https://github.com/yourlink" target="_blank">View on GitHub →</a></p>
+            `
+        },
+        project3: {
+            title: "Accessibility at Esplanade",
+            images: [
+                "https://via.placeholder.com/600x400?text=Esplanade+Image+1",
+                "https://via.placeholder.com/600x400?text=Esplanade+Image+2"
+            ],
+            description: `
+                <p><strong>Overview:</strong> The project focuses on designing a calm, sensory-considerate space at the Esplanade to reduce overstimulation and improve accessibility.</p>
+                <p><strong>Technologies Used:</strong> Full-Stack, Node.js</p>
+                <p><strong>Design Focus:</strong> Sensory-friendly environment, accessibility features.</p>
+                <p><strong>Results:</strong> User feedback and improvements made.</p>
+                <p><a href="https://github.com/yourlink" target="_blank">View on GitHub →</a></p>
+            `
+        }
+    };
+
+    function openProject(title, projectKey) {
+        const modal = document.getElementById("projectModal");
+        const modalBody = document.getElementById("modalBody");
+        const project = projects[projectKey];
+
+        let imagesHTML = '';
+        project.images.forEach(img => {
+            imagesHTML += `<img src="${img}" alt="${project.title}" class="modal-image">`;
+        });
+
+        modalBody.innerHTML = `
+            <h2>${project.title}</h2>
+            ${imagesHTML}
+            ${project.description}
+        `;
+
+        modal.style.display = "block";
+    }
+
+    // Close modal when X is clicked
+    document.querySelector(".close").addEventListener("click", function() {
+        document.getElementById("projectModal").style.display = "none";
+    });
+
+    // Close modal when clicking outside of it
+    window.addEventListener("click", function(event) {
+        const modal = document.getElementById("projectModal");
+        if (event.target === modal) {
+            modal.style.display = "none";
+        }
+    });
+</script>
 </body>
 </html>
