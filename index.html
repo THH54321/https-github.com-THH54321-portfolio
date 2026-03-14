@@ -3,110 +3,146 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio</title>
+    <title>My Portfolio - THH54321</title>
     <link rel="stylesheet" href="styles.css">
-    <script src="script.js" defer></script>
 </head>
 <body>
-    <header>
-        <h1>My Portfolio</h1>
+    <header class="navbar">
+        <h1 class="logo">My Portfolio</h1>
     </header>
-    <section id="hero">
+
+    <section class="hero">
         <h2>Welcome to My Portfolio</h2>
+        <p>Explore my work and projects.</p>
     </section>
-    <section id="about">
-        <h3>About Me</h3>
-        <p>This section contains information about me.</p>
+
+    <section id="about" class="about">
+        <h2>About Me</h2>
+        <p>I am a passionate developer with experience in modern web development.</p>
     </section>
-    <section id="projects">
-        <h3>My Projects</h3>
-        <div class="project-card" id="project1">
-            <h4>Project 1</h4>
-            <button class="open-modal">View Details</button>
-            <div class="modal">
-                <div class="modal-content">
-                    <span class="close">&times;</span>
-                    <p>Details about Project 1</p>
-                </div>
+
+    <section id="projects" class="projects">
+        <h2>My Projects</h2>
+        <div class="projects-grid">
+            <div class="project-card">
+                <h3>Little Go Getters</h3>
+                <p>Mobile app for children's learning.</p>
+                <button class="project-link" onclick="openModal(1)">View Project</button>
             </div>
-        </div>
-        <div class="project-card" id="project2">
-            <h4>Project 2</h4>
-            <button class="open-modal">View Details</button>
-            <div class="modal">
-                <div class="modal-content">
-                    <span class="close">&times;</span>
-                    <p>Details about Project 2</p>
-                </div>
+
+            <div class="project-card">
+                <h3>Who Am I Card Game</h3>
+                <p>Interactive card guessing game.</p>
+                <button class="project-link" onclick="openModal(2)">View Project</button>
             </div>
-        </div>
-        <div class="project-card" id="project3">
-            <h4>Project 3</h4>
-            <button class="open-modal">View Details</button>
-            <div class="modal">
-                <div class="modal-content">
-                    <span class="close">&times;</span>
-                    <p>Details about Project 3</p>
-                </div>
+
+            <div class="project-card">
+                <h3>Accessibility at Esplanade</h3>
+                <p>Accessibility website for venues.</p>
+                <button class="project-link" onclick="openModal(3)">View Project</button>
             </div>
-        </div>
-        <div class="project-card" id="project4">
-            <h4>Project 4</h4>
-            <button class="open-modal">View Details</button>
-            <div class="modal">
-                <div class="modal-content">
-                    <span class="close">&times;</span>
-                    <p>Details about Project 4</p>
-                </div>
+
+            <div class="project-card">
+                <h3>Awakened Trilith</h3>
+                <p>AR gaming experience.</p>
+                <button class="project-link" onclick="openModal(4)">View Project</button>
             </div>
-        </div>
-        <div class="project-card" id="project5">
-            <h4>Project 5</h4>
-            <button class="open-modal">View Details</button>
-            <div class="modal">
-                <div class="modal-content">
-                    <span class="close">&times;</span>
-                    <p>Details about Project 5</p>
-                </div>
+
+            <div class="project-card">
+                <h3>Tai Sin Electric Consulting</h3>
+                <p>Electrical systems optimization.</p>
+                <button class="project-link" onclick="openModal(5)">View Project</button>
             </div>
-        </div>
-        <div class="project-card" id="project6">
-            <h4>Project 6</h4>
-            <button class="open-modal">View Details</button>
-            <div class="modal">
-                <div class="modal-content">
-                    <span class="close">&times;</span>
-                    <p>Details about Project 6</p>
-                </div>
+
+            <div class="project-card">
+                <h3>ANTS Project Management</h3>
+                <p>Team collaboration tool.</p>
+                <button class="project-link" onclick="openModal(6)">View Project</button>
             </div>
         </div>
     </section>
-    <section id="experience">
-        <h3>My Experience</h3>
-        <p>This section covers my work experience.</p>
+
+    <section id="experience" class="experience">
+        <h2>Experience</h2>
+        <p>Professional experience details.</p>
     </section>
-    <section id="contact">
-        <h3>Contact Me</h3>
-        <p>This section contains my contact information.</p>
+
+    <section id="contact" class="contact">
+        <h2>Contact</h2>
+        <p>Get in touch with me.</p>
     </section>
+
+    <footer>
+        <p>&copy; 2026 THH54321</p>
+    </footer>
+
+    <!-- MODAL 1 -->
+    <div id="modal1" class="modal" onclick="if(event.target.id=='modal1') closeModal(1)">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal(1)">&times;</span>
+            <h2>Little Go Getters</h2>
+            <p>A fun mobile app designed for children's learning and development.</p>
+            <p><strong>Tech:</strong> React Native, Firebase</p>
+        </div>
+    </div>
+
+    <!-- MODAL 2 -->
+    <div id="modal2" class="modal" onclick="if(event.target.id=='modal2') closeModal(2)">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal(2)">&times;</span>
+            <h2>Who Am I Card Game</h2>
+            <p>Interactive card game to guess characters and celebrities.</p>
+            <p><strong>Tech:</strong> HTML5, CSS3, JavaScript</p>
+        </div>
+    </div>
+
+    <!-- MODAL 3 -->
+    <div id="modal3" class="modal" onclick="if(event.target.id=='modal3') closeModal(3)">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal(3)">&times;</span>
+            <h2>Accessibility at Esplanade</h2>
+            <p>Website promoting accessibility at cultural venues.</p>
+            <p><strong>Tech:</strong> Vue.js, Express.js, MongoDB</p>
+        </div>
+    </div>
+
+    <!-- MODAL 4 -->
+    <div id="modal4" class="modal" onclick="if(event.target.id=='modal4') closeModal(4)">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal(4)">&times;</span>
+            <h2>Awakened Trilith</h2>
+            <p>Innovative AR experience combining gaming with technology.</p>
+            <p><strong>Tech:</strong> ARCore, Unity, C#</p>
+        </div>
+    </div>
+
+    <!-- MODAL 5 -->
+    <div id="modal5" class="modal" onclick="if(event.target.id=='modal5') closeModal(5)">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal(5)">&times;</span>
+            <h2>Consultant for Tai Sin Electric Limited</h2>
+            <p>Business consulting for electrical systems optimization.</p>
+            <p><strong>Services:</strong> Analysis, Cost Optimization, Process Improvement</p>
+        </div>
+    </div>
+
+    <!-- MODAL 6 -->
+    <div id="modal6" class="modal" onclick="if(event.target.id=='modal6') closeModal(6)">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal(6)">&times;</span>
+            <h2>ANTS – Project Management Software</h2>
+            <p>Comprehensive project management tool with real-time collaboration.</p>
+            <p><strong>Tech:</strong> React, TypeScript, GraphQL, PostgreSQL</p>
+        </div>
+    </div>
+
+    <script>
+        function openModal(num) {
+            document.getElementById('modal' + num).style.display = 'block';
+        }
+        function closeModal(num) {
+            document.getElementById('modal' + num).style.display = 'none';
+        }
+    </script>
 </body>
-<script>
-    // Modal functionality
-    const openModalButtons = document.querySelectorAll('.open-modal');
-    const closeModalButtons = document.querySelectorAll('.close');
-
-    openModalButtons.forEach(button => {
-        button.addEventListener('click', () => {
-            const modal = button.nextElementSibling;
-            modal.style.display = 'block';
-        });
-    });
-
-    closeModalButtons.forEach(button => {
-        button.addEventListener('click', () => {
-            const modal = button.closest('.modal');
-            modal.style.display = 'none';
-        });
-    });
-</script>
 </html>
