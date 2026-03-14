@@ -37,7 +37,7 @@ body {
 header {
     position: sticky;
     top: 0;
-    background-color: var(--white);
+    background-color: var(--black);
     border-bottom: 1px solid var(--border-color);
     z-index: 100;
 }
