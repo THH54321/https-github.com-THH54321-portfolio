@@ -79,19 +79,19 @@ header {
 .hero {
     padding: 100px 0;
     text-align: center;
-    background: #e8e8e8;
+    background: var(--white);
 }
 
 .hero h2 {
     font-size: 3.5rem;
     margin-bottom: 1rem;
     font-weight: 700;
-    color: #ffffff;
+    color: #000000;
 }
 
 .hero p {
     font-size: 1.2rem;
-    color: #ffffff;
+    color: #000000;
     margin-bottom: 2rem;
 }
 
