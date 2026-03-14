@@ -1,32 +1,88 @@
-const projects = [
-    {
-        name: 'project1',
-        image: 'image1.jpg',
-        description: 'Description of project 1.'
-    },
-    {
-        name: 'project2',
-        image: 'image2.jpg',
-        description: 'Description of project 2.'
-    },
-    {
-        name: 'project3',
-        image: 'image3.jpg',
-        description: 'Description of project 3.'
-    },
-    {
-        name: 'project4',
-        image: 'image4.jpg',
-        description: 'Description of project 4.'
-    },
-    {
-        name: 'project5',
-        image: 'image5.jpg',
-        description: 'Description of project 5.'
-    },
-    {
-        name: 'project6',
-        image: 'image6.jpg',
-        description: 'Description of project 6.'
-    }
-];
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>My Portfolio</h1>
+        <nav>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h2>Welcome to My Portfolio</h2>
+        <p>Explore my work and projects.</p>
+    </section>
+
+    <section id="about">
+        <h2>About Me</h2>
+        <p>Information about yourself.</p>
+    </section>
+
+    <section id="projects">
+        <h2>My Projects</h2>
+        <div class="projects-grid">
+            <div class="project" id="project1">
+                <h3>Little Go Getters</h3>
+                <p>Details about Little Go Getters.</p>
+                <img src="https://raw.githubusercontent.com/THH54321/project1_image.png" alt="Project 1 Image">
+            </div>
+            <div class="project" id="project2">
+                <h3>Who Am I Card Game</h3>
+                <p>Details about Who Am I Card Game.</p>
+            </div>
+            <div class="project" id="project3">
+                <h3>Accessibility at Esplanade</h3>
+                <p>Details about Accessibility at Esplanade.</p>
+            </div>
+            <div class="project" id="project4">
+                <h3>Project 4</h3>
+                <p>Placeholder content for Project 4.</p>
+            </div>
+            <div class="project" id="project5">
+                <h3>Project 5</h3>
+                <p>Placeholder content for Project 5.</p>
+            </div>
+            <div class="project" id="project6">
+                <h3>Project 6</h3>
+                <p>Placeholder content for Project 6.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="experience">
+        <h2>Experience</h2>
+        <p>Your experience details.</p>
+    </section>
+
+    <section id="contact">
+        <h2>Contact</h2>
+        <p>Your contact information.</p>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Your Name</p>
+    </footer>
+
+    <script>
+        const projects = [
+            { title: 'Little Go Getters', description: 'Details about Little Go Getters.', image: 'https://raw.githubusercontent.com/THH54321/project1_image.png' },
+            { title: 'Who Am I Card Game', description: 'Details about Who Am I Card Game.', image: '' },
+            { title: 'Accessibility at Esplanade', description: 'Details about Accessibility at Esplanade.', image: '' },
+            { title: 'Project 4', description: 'Placeholder content for Project 4.', image: '' },
+            { title: 'Project 5', description: 'Placeholder content for Project 5.', image: '' },
+            { title: 'Project 6', description: 'Placeholder content for Project 6.', image: '' }
+        ];
+    </script>
+</body>
+</html>
