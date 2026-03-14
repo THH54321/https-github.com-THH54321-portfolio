@@ -79,7 +79,7 @@ header {
 .hero {
     padding: 100px 0;
     text-align: center;
-    background: var(--white);
+    background: #f5f5f5;
 }
 
 .hero h2 {
