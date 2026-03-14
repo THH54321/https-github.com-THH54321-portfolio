@@ -108,29 +108,29 @@
     </section>
 
     <!-- Experience Section -->
-    <section id="experience" class="experience">
-        <div class="container">
-            <h2>Experience</h2>
-            <div class="experience-item">
-                <h3>Senior Developer</h3>
-                <p class="company">Company Name | 2024 - Present</p>
-                <ul>
-                    <li>Led development of key features</li>
-                    <li>Mentored junior developers</li>
-                    <li>Improved system performance by 30%</li>
-                </ul>
-            </div>
-            <div class="experience-item">
-                <h3>Developer</h3>
-                <p class="company">Previous Company | 2022 - 2024</p>
-                <ul>
-                    <li>Built responsive web applications</li>
-                    <li>Collaborated with cross-functional teams</li>
-                    <li>Maintained and debugged legacy systems</li>
-                </ul>
-            </div>
+<section id="experience" class="experience">
+    <div class="container">
+        <h2>Experience</h2>
+        <div class="experience-item" onclick="openExperience('Senior Developer', 'experience1')">
+            <h3>Senior Developer</h3>
+            <p class="company">Company Name | 2024 - Present</p>
+            <ul>
+                <li>Led development of key features</li>
+                <li>Mentored junior developers</li>
+                <li>Improved system performance by 30%</li>
+            </ul>
         </div>
-    </section>
+        <div class="experience-item" onclick="openExperience('Developer', 'experience2')">
+            <h3>Developer</h3>
+            <p class="company">Previous Company | 2022 - 2024</p>
+            <ul>
+                <li>Built responsive web applications</li>
+                <li>Collaborated with cross-functional teams</li>
+                <li>Maintained and debugged legacy systems</li>
+            </ul>
+        </div>
+    </div>
+</section>
 
     <!-- Contact Section -->
     <section id="contact" class="contact">
@@ -160,84 +160,114 @@
         </div>
     </div>
 </div>
+<!-- Modal for Experience Details -->
+<div id="experienceModal" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <div id="experienceModalBody">
+            <!-- Experience details will be inserted here -->
+        </div>
+    </div>
+</div>
     <script>
-    // Project data with images and descriptions
-    const projects = {
-        project1: {
-            title: "Little Go Getters",
-            images: [
-                "https://github.com/THH54321/https-github.com-THH54321-portfolio/blob/main/20230710_GlobalVillage_MLS-11%20(1)%20(1).jpg?raw=true",
-                "https://via.placeholder.com/600x400?text=Project+1+Image+2"
-            ],
-            description: `
-                <p><strong>Overview:</strong> Detailed description of your first project goes here.</p>
-                <p><strong>Technologies Used:</strong> JavaScript, React, Node.js</p>
-                <p><strong>What I Did:</strong> List your contributions and achievements.</p>
-                <p><strong>Results:</strong> What was the impact or outcome?</p>
-                <p><a href="https://github.com/yourlink" target="_blank">View on GitHub →</a></p>
-            `
-        },
-        project2: {
-            title: '"Who Am I" Card Game',
-            images: [
-                "https://via.placeholder.com/600x400?text=Card+Game+Image+1",
-                "https://via.placeholder.com/600x400?text=Card+Game+Image+2"
-            ],
-            description: `
-                <p><strong>Overview:</strong> An emotionally sensitive, practical, and ethically appropriate card game that helps caregivers better understand the personhood of palliative patients.</p>
-                <p><strong>Technologies Used:</strong> Python, API</p>
-                <p><strong>Purpose:</strong> Designed to improve caregiver-patient relationships through empathy-driven gameplay.</p>
-                <p><strong>Impact:</strong> Describe the feedback or results from testing.</p>
-                <p><a href="https://github.com/yourlink" target="_blank">View on GitHub →</a></p>
-            `
-        },
-        project3: {
-            title: "Accessibility at Esplanade",
-            images: [
-                "https://via.placeholder.com/600x400?text=Esplanade+Image+1",
-                "https://via.placeholder.com/600x400?text=Esplanade+Image+2"
-            ],
-            description: `
-                <p><strong>Overview:</strong> The project focuses on designing a calm, sensory-considerate space at the Esplanade to reduce overstimulation and improve accessibility.</p>
-                <p><strong>Technologies Used:</strong> Full-Stack, Node.js</p>
-                <p><strong>Design Focus:</strong> Sensory-friendly environment, accessibility features.</p>
-                <p><strong>Results:</strong> User feedback and improvements made.</p>
-                <p><a href="https://github.com/yourlink" target="_blank">View on GitHub →</a></p>
-            `
-        }
-    };
-
-    function openProject(title, projectKey) {
-        const modal = document.getElementById("projectModal");
-        const modalBody = document.getElementById("modalBody");
-        const project = projects[projectKey];
-
-        let imagesHTML = '';
-        project.images.forEach(img => {
-            imagesHTML += `<img src="${img}" alt="${project.title}" class="modal-image">`;
-        });
-
-        modalBody.innerHTML = `
-            <h2>${project.title}</h2>
-            ${imagesHTML}
-            ${project.description}
-        `;
-
-        modal.style.display = "block";
+// Project data
+const projects = {
+    project1: {
+        title: "Little Go Getters",
+        images: [
+            "https://github.com/THH54321/https-github.com-THH54321-portfolio/blob/main/20230710_GlobalVillage_MLS-11%20(1)%20(1).jpg?raw=true",
+            "https://via.placeholder.com/600x400?text=Project+1+Image+2"
+        ],
+        description: `
+            <p><strong>Overview:</strong> Detailed description of your first project goes here.</p>
+            <p><strong>Technologies Used:</strong> JavaScript, React, Node.js</p>
+            <p><strong>What I Did:</strong> List your contributions and achievements.</p>
+            <p><strong>Results:</strong> What was the impact or outcome?</p>
+            <p><a href="https://github.com/yourlink" target="_blank">View on GitHub →</a></p>
+        `
     }
+};
 
-    // Close modal when X is clicked
-    document.querySelector(".close").addEventListener("click", function() {
-        document.getElementById("projectModal").style.display = "none";
+// Experience data
+const experiences = {
+    experience1: {
+        title: "Senior Developer",
+        company: "Company Name",
+        period: "2024 - Present",
+        description: `
+            <p><strong>Role:</strong> Senior Developer</p>
+            <p><strong>Company:</strong> Company Name | 2024 - Present</p>
+            <ul>
+                <li>Led development of key features</li>
+                <li>Mentored junior developers</li>
+                <li>Improved system performance by 30%</li>
+                <li>Add more achievements here</li>
+            </ul>
+            <p><strong>Key Skills:</strong> JavaScript, React, Node.js, Team Leadership</p>
+        `
+    },
+    experience2: {
+        title: "Developer",
+        company: "Previous Company",
+        period: "2022 - 2024",
+        description: `
+            <p><strong>Role:</strong> Developer</p>
+            <p><strong>Company:</strong> Previous Company | 2022 - 2024</p>
+            <ul>
+                <li>Built responsive web applications</li>
+                <li>Collaborated with cross-functional teams</li>
+                <li>Maintained and debugged legacy systems</li>
+                <li>Add more achievements here</li>
+            </ul>
+            <p><strong>Key Skills:</strong> HTML, CSS, JavaScript, Problem Solving</p>
+        `
+    }
+};
+
+function openProject(title, projectKey) {
+    const modal = document.getElementById("projectModal");
+    const modalBody = document.getElementById("modalBody");
+    const project = projects[projectKey];
+
+    let imagesHTML = '';
+    project.images.forEach(img => {
+        imagesHTML += `<img src="${img}" alt="${project.title}" class="modal-image">`;
     });
 
-    // Close modal when clicking outside of it
-    window.addEventListener("click", function(event) {
-        const modal = document.getElementById("projectModal");
-        if (event.target === modal) {
-            modal.style.display = "none";
-        }
+    modalBody.innerHTML = `
+        <h2>${project.title}</h2>
+        ${imagesHTML}
+        ${project.description}
+    `;
+
+    modal.style.display = "block";
+}
+
+function openExperience(title, experienceKey) {
+    const modal = document.getElementById("experienceModal");
+    const modalBody = document.getElementById("experienceModalBody");
+    const experience = experiences[experienceKey];
+
+    modalBody.innerHTML = `
+        <h2>${experience.title}</h2>
+        <p class="company">${experience.company} | ${experience.period}</p>
+        ${experience.description}
+    `;
+
+    modal.style.display = "block";
+}
+
+// Close modals when X is clicked
+document.querySelectorAll(".close").forEach(closeBtn => {
+    closeBtn.addEventListener("click", function() {
+        this.closest(".modal").style.display = "none";
     });
+});
+
+// Close modal when clicking outside of it
+window.addEventListener("click", function(event) {
+    if (event.target.classList.contains("modal")) {
+        event.target.style.display = "none";
+    }
+});
 </script>
-</body>
-</html>
