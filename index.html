@@ -3,145 +3,186 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio - THH54321</title>
+    <title>Tan Hong Han - Portfolio</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header class="navbar">
-        <h1 class="logo">My Portfolio</h1>
+        <div class="container">
+            <h1 class="logo">Tan Hong Han</h1>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#experience">Experience</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
 
-    <section class="hero">
-        <h2>Welcome to My Portfolio</h2>
-        <p>Explore my work and projects.</p>
+    <section id="home" class="hero">
+        <div class="container">
+            <h2>Welcome</h2>
+            <p>Turning Data into Insights | Environmental Sustainability | World Traveller</p>
+            <a href="#projects" class="cta-button">View My Work</a>
+        </div>
     </section>
 
     <section id="about" class="about">
-        <h2>About Me</h2>
-        <p>I am a passionate developer with experience in modern web development.</p>
+        <div class="container">
+            <h2>About Me</h2>
+            <p>I am an Engineering Systems and Design undergraduate at the Singapore University of Technology and Design (SUTD) with a specialisation in Financial Services and a minor in Sustainability by Design and Design, Technology and Society. I enjoy working across disciplines, collaborating with diverse teams, and realising complex ideas into practical solutions.</p>
+            
+            <div class="skills">
+                <h3>Skills</h3>
+                <div class="skill-tags">
+                    <span class="tag">Microsoft Office</span>
+                    <span class="tag">Python</span>
+                    <span class="tag">R</span>
+                    <span class="tag">SQL</span>
+                    <span class="tag">Canva</span>
+                    <span class="tag">Project Management</span>
+                </div>
+            </div>
+        </div>
     </section>
 
     <section id="projects" class="projects">
-        <h2>My Projects</h2>
-        <div class="projects-grid">
-            <div class="project-card">
-                <h3>Little Go Getters</h3>
-                <p>Mobile app for children's learning.</p>
-                <button class="project-link" onclick="openModal(1)">View Project</button>
-            </div>
+        <div class="container">
+            <h2>Projects</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <h3>Little Go Getters– Market Entry Strategy Project</h3>
+                    <p>Collaborated as an international team of seven students on a client-facing consultancy project to develop strategies for launching a new business without relying on Meta social media platforms.</p>
+                    <a href="javascript:void(0)" onclick="openModal(1)" class="project-link">View Project →</a>
+                </div>
 
-            <div class="project-card">
-                <h3>Who Am I Card Game</h3>
-                <p>Interactive card guessing game.</p>
-                <button class="project-link" onclick="openModal(2)">View Project</button>
-            </div>
+                <div class="project-card">
+                    <h3>"Who Am I" Card Game - A card game on understanding personhood</h3>
+                    <p>An emotionally sensitive, practical, and ethically appropriate card game that helps caregivers better understand the personhood of palliative patients.</p>
+                    <a href="javascript:void(0)" onclick="openModal(2)" class="project-link">View Project →</a>
+                </div>
 
-            <div class="project-card">
-                <h3>Accessibility at Esplanade</h3>
-                <p>Accessibility website for venues.</p>
-                <button class="project-link" onclick="openModal(3)">View Project</button>
-            </div>
+                <div class="project-card">
+                    <h3>Accessibility at Esplanade – Inclusive Design Project</h3>
+                    <p>The project focuses on designing a calm, sensory-considerate space at the Esplanade to reduce overstimulation and improve accessibility.</p>
+                    <a href="javascript:void(0)" onclick="openModal(3)" class="project-link">View Project →</a>
+                </div>
 
-            <div class="project-card">
-                <h3>Awakened Trilith</h3>
-                <p>AR gaming experience.</p>
-                <button class="project-link" onclick="openModal(4)">View Project</button>
-            </div>
+                <div class="project-card">
+                    <h3>Awakened Trilith</h3>
+                    <p>An innovative Augmented Reality experience combining gaming and cutting-edge technology for immersive real-world interaction.</p>
+                    <a href="javascript:void(0)" onclick="openModal(4)" class="project-link">View Project →</a>
+                </div>
 
-            <div class="project-card">
-                <h3>Tai Sin Electric Consulting</h3>
-                <p>Electrical systems optimization.</p>
-                <button class="project-link" onclick="openModal(5)">View Project</button>
-            </div>
+                <div class="project-card">
+                    <h3>Consultant for Tai Sin Electric Limited</h3>
+                    <p>Business consulting project focused on electrical systems optimization and operational efficiency improvements.</p>
+                    <a href="javascript:void(0)" onclick="openModal(5)" class="project-link">View Project →</a>
+                </div>
 
-            <div class="project-card">
-                <h3>ANTS Project Management</h3>
-                <p>Team collaboration tool.</p>
-                <button class="project-link" onclick="openModal(6)">View Project</button>
+                <div class="project-card">
+                    <h3>ANTS – A Project Management Software</h3>
+                    <p>A comprehensive project management tool for teams and organizations with real-time collaboration features and progress tracking.</p>
+                    <a href="javascript:void(0)" onclick="openModal(6)" class="project-link">View Project →</a>
+                </div>
             </div>
         </div>
     </section>
 
     <section id="experience" class="experience">
-        <h2>Experience</h2>
-        <p>Professional experience details.</p>
+        <div class="container">
+            <h2>Experience</h2>
+            <div class="experience-item">
+                <h3>Project Role</h3>
+                <p class="company">Various Organizations</p>
+                <ul>
+                    <li>Collaborated with multidisciplinary teams</li>
+                    <li>Developed human-centered design solutions</li>
+                    <li>Conducted research in sustainability and technology</li>
+                </ul>
+            </div>
+        </div>
     </section>
 
     <section id="contact" class="contact">
-        <h2>Contact</h2>
-        <p>Get in touch with me.</p>
+        <div class="container">
+            <h2>Contact</h2>
+            <p>Get in touch for collaboration opportunities</p>
+            <div class="contact-links">
+                <a href="mailto:tan_honghan@yahoo.com" class="contact-btn">Email Me</a>
+                <a href="#" class="contact-btn">LinkedIn</a>
+            </div>
+        </div>
     </section>
 
     <footer>
-        <p>&copy; 2026 THH54321</p>
+        <p>&copy; 2026 Tan Hong Han</p>
     </footer>
 
-    <!-- MODAL 1 -->
-    <div id="modal1" class="modal" onclick="if(event.target.id=='modal1') closeModal(1)">
+    <!-- MODALS FOR ALL 6 PROJECTS -->
+    <div id="modal1" class="modal" onclick="if(event.target.id=='modal1')closeModal(1)">
         <div class="modal-content">
             <span class="close" onclick="closeModal(1)">&times;</span>
             <h2>Little Go Getters</h2>
-            <p>A fun mobile app designed for children's learning and development.</p>
-            <p><strong>Tech:</strong> React Native, Firebase</p>
+            <p>International consultancy project with 7 students developing market entry strategies for a new business.</p>
+            <p><strong>Key Learnings:</strong> Client engagement, market strategy, cross-cultural collaboration</p>
         </div>
     </div>
 
-    <!-- MODAL 2 -->
-    <div id="modal2" class="modal" onclick="if(event.target.id=='modal2') closeModal(2)">
+    <div id="modal2" class="modal" onclick="if(event.target.id=='modal2')closeModal(2)">
         <div class="modal-content">
             <span class="close" onclick="closeModal(2)">&times;</span>
             <h2>Who Am I Card Game</h2>
-            <p>Interactive card game to guess characters and celebrities.</p>
-            <p><strong>Tech:</strong> HTML5, CSS3, JavaScript</p>
+            <p>Emotionally sensitive card game helping caregivers understand palliative patients better.</p>
+            <p><strong>Focus:</strong> Healthcare, Empathy, Ethical Design</p>
         </div>
     </div>
 
-    <!-- MODAL 3 -->
-    <div id="modal3" class="modal" onclick="if(event.target.id=='modal3') closeModal(3)">
+    <div id="modal3" class="modal" onclick="if(event.target.id=='modal3')closeModal(3)">
         <div class="modal-content">
             <span class="close" onclick="closeModal(3)">&times;</span>
             <h2>Accessibility at Esplanade</h2>
-            <p>Website promoting accessibility at cultural venues.</p>
-            <p><strong>Tech:</strong> Vue.js, Express.js, MongoDB</p>
+            <p>Designing inclusive, sensory-considerate spaces at cultural venues for all visitors.</p>
+            <p><strong>Focus:</strong> Inclusive Design, Accessibility</p>
         </div>
     </div>
 
-    <!-- MODAL 4 -->
-    <div id="modal4" class="modal" onclick="if(event.target.id=='modal4') closeModal(4)">
+    <div id="modal4" class="modal" onclick="if(event.target.id=='modal4')closeModal(4)">
         <div class="modal-content">
             <span class="close" onclick="closeModal(4)">&times;</span>
             <h2>Awakened Trilith</h2>
-            <p>Innovative AR experience combining gaming with technology.</p>
-            <p><strong>Tech:</strong> ARCore, Unity, C#</p>
+            <p>Innovative AR experience combining gaming and cutting-edge technology.</p>
+            <p><strong>Technology:</strong> ARCore, Unity, C#</p>
         </div>
     </div>
 
-    <!-- MODAL 5 -->
-    <div id="modal5" class="modal" onclick="if(event.target.id=='modal5') closeModal(5)">
+    <div id="modal5" class="modal" onclick="if(event.target.id=='modal5')closeModal(5)">
         <div class="modal-content">
             <span class="close" onclick="closeModal(5)">&times;</span>
-            <h2>Consultant for Tai Sin Electric Limited</h2>
-            <p>Business consulting for electrical systems optimization.</p>
-            <p><strong>Services:</strong> Analysis, Cost Optimization, Process Improvement</p>
+            <h2>Tai Sin Electric Consulting</h2>
+            <p>Business consulting for electrical systems optimization and efficiency.</p>
+            <p><strong>Services:</strong> System Analysis, Cost Optimization, Process Improvement</p>
         </div>
     </div>
 
-    <!-- MODAL 6 -->
-    <div id="modal6" class="modal" onclick="if(event.target.id=='modal6') closeModal(6)">
+    <div id="modal6" class="modal" onclick="if(event.target.id=='modal6')closeModal(6)">
         <div class="modal-content">
             <span class="close" onclick="closeModal(6)">&times;</span>
             <h2>ANTS – Project Management Software</h2>
-            <p>Comprehensive project management tool with real-time collaboration.</p>
-            <p><strong>Tech:</strong> React, TypeScript, GraphQL, PostgreSQL</p>
+            <p>Comprehensive project management tool with real-time collaboration, task tracking, and analytics.</p>
+            <p><strong>Technology:</strong> React, TypeScript, GraphQL, PostgreSQL</p>
         </div>
     </div>
 
     <script>
-        function openModal(num) {
-            document.getElementById('modal' + num).style.display = 'block';
+        function openModal(n) {
+            document.getElementById('modal' + n).style.display = 'block';
         }
-        function closeModal(num) {
-            document.getElementById('modal' + num).style.display = 'none';
+        function closeModal(n) {
+            document.getElementById('modal' + n).style.display = 'none';
         }
     </script>
 </body>
