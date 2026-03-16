@@ -11,7 +11,7 @@
     <header>
         <nav class="navbar">
             <div class="container">
-                <h1 class="logo">Tan Hong Han</h1>
+                <h1 class="logo" onclick="showCutePopup()" style="cursor: pointer;">Tan Hong Han</h1>
                 <ul class="nav-links">
                     <li><a href="#home">Home</a></li>
                     <li><a href="#about">About</a></li>
@@ -361,4 +361,28 @@ window.addEventListener("click", function(event) {
         event.target.style.display = "none";
     }
 });
+// Cute Popup Functions
+function showCutePopup() {
+    document.getElementById('cutePopup').style.display = 'block';
+    document.getElementById('cuteOverlay').style.display = 'block';
+}
+
+function closeCutePopup() {
+    document.getElementById('cutePopup').style.display = 'none';
+    document.getElementById('cuteOverlay').style.display = 'none';
+}
+
+// Close when clicking outside
+document.getElementById('cuteOverlay').addEventListener('click', closeCutePopup);
 </script>
+    <!-- Cute Popup -->
+    <div class="cute-popup-overlay" id="cuteOverlay"></div>
+    <div class="cute-popup" id="cutePopup">
+        <div class="cute-popup-emoji">👋</div>
+        <h2>Hi there!</h2>
+        <p>Welcome to my portfolio! Feel free to explore my work and projects. 😊</p>
+        <button class="cute-popup-close" onclick="closeCutePopup()">Close</button>
+    </div>
+
+</body>
+</html>
