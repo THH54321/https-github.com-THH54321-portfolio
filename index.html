@@ -368,6 +368,11 @@ function toggleHello() {
     const helloEmoji = document.getElementById('helloEmoji');
     if (helloEmoji.style.display === 'none') {
         helloEmoji.style.display = 'inline';
+        
+        // Auto-hide after 3 seconds
+        setTimeout(function() {
+            helloEmoji.style.display = 'none';
+        }, 3000);
     } else {
         helloEmoji.style.display = 'none';
     }
