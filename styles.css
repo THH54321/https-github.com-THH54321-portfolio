@@ -474,3 +474,11 @@ footer p {
 .experience-link:hover {
     color: #0052a3;
 }
+.experience-item ul li {
+    margin-bottom: 1.5rem;
+}
+
+.experience-item p {
+    margin-bottom: 1.5rem;
+    line-height: 1.75;
+}
