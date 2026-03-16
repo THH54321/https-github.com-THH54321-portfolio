@@ -363,22 +363,8 @@ window.addEventListener("click", function(event) {
         event.target.style.display = "none";
     }
 });
-// Cute Popup Functions
-function showCutePopup() {
-    document.getElementById('cutePopup').style.display = 'block';
-    document.getElementById('cuteOverlay').style.display = 'block';
-}
-
-function closeCutePopup() {
-    document.getElementById('cutePopup').style.display = 'none';
-    document.getElementById('cuteOverlay').style.display = 'none';
-}
-
-// Close when clicking outside
-document.getElementById('cuteOverlay').addEventListener('click', closeCutePopup);
-</script>
-    <!-- Cute Popup -->
-    function toggleHello() {
+// Toggle Hello Emoji Function
+function toggleHello() {
     const helloEmoji = document.getElementById('helloEmoji');
     if (helloEmoji.style.display === 'none') {
         helloEmoji.style.display = 'inline';
@@ -386,6 +372,8 @@ document.getElementById('cuteOverlay').addEventListener('click', closeCutePopup)
         helloEmoji.style.display = 'none';
     }
 }
+
+</script>
 
 </body>
 </html>
