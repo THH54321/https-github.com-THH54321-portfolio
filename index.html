@@ -11,7 +11,9 @@
     <header>
         <nav class="navbar">
             <div class="container">
-                <h1 class="logo" onclick="showCutePopup()" style="cursor: pointer;">Tan Hong Han</h1>
+                <h1 class="logo" onclick="toggleHello()" style="cursor: pointer;">
+    Tan Hong Han <span id="helloEmoji" style="display: none;">👋 Hi!</span>
+</h1>
                 <ul class="nav-links">
                     <li><a href="#home">Home</a></li>
                     <li><a href="#about">About</a></li>
@@ -376,13 +378,14 @@ function closeCutePopup() {
 document.getElementById('cuteOverlay').addEventListener('click', closeCutePopup);
 </script>
     <!-- Cute Popup -->
-    <div class="cute-popup-overlay" id="cuteOverlay"></div>
-    <div class="cute-popup" id="cutePopup">
-        <div class="cute-popup-emoji">👋</div>
-        <h2>Hi there!</h2>
-        <p>Welcome to my portfolio! Feel free to explore my work and projects. 😊</p>
-        <button class="cute-popup-close" onclick="closeCutePopup()">Close</button>
-    </div>
+    function toggleHello() {
+    const helloEmoji = document.getElementById('helloEmoji');
+    if (helloEmoji.style.display === 'none') {
+        helloEmoji.style.display = 'inline';
+    } else {
+        helloEmoji.style.display = 'none';
+    }
+}
 
 </body>
 </html>
