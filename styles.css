@@ -432,11 +432,25 @@ footer p {
 .modal h2 {
     color: #0066cc;
     margin-top: 0;
+    margin-bottom: 0.5rem;
 }
 
 .modal p {
-    line-height: 1.6;
+    line-height: 1.75;
     color: #333;
+    margin-bottom: 1rem;
+}
+
+.modal p:last-child {
+    margin-bottom: 0;
+}
+
+.modal iframe {
+    display: block;
+    width: 100%;
+    margin: 0 0 1.25rem;
+    border: 0;
+    border-radius: 8px;
 }
 /* ===== Experience Item Clickable ===== */
 .experience-item {
